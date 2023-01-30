@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/my-spotify-player/static/css/main.622add6d.chunk.css",
+    "main.js": "/my-spotify-player/static/js/main.df32dac5.chunk.js",
+    "main.js.map": "/my-spotify-player/static/js/main.df32dac5.chunk.js.map",
+    "runtime-main.js": "/my-spotify-player/static/js/runtime-main.c1854dd6.js",
+    "runtime-main.js.map": "/my-spotify-player/static/js/runtime-main.c1854dd6.js.map",
+    "static/js/2.30f72a6a.chunk.js": "/my-spotify-player/static/js/2.30f72a6a.chunk.js",
+    "static/js/2.30f72a6a.chunk.js.map": "/my-spotify-player/static/js/2.30f72a6a.chunk.js.map",
+    "static/js/3.73d58198.chunk.js": "/my-spotify-player/static/js/3.73d58198.chunk.js",
+    "static/js/3.73d58198.chunk.js.map": "/my-spotify-player/static/js/3.73d58198.chunk.js.map",
+    "index.html": "/my-spotify-player/index.html",
+    "static/css/main.622add6d.chunk.css.map": "/my-spotify-player/static/css/main.622add6d.chunk.css.map",
+    "static/js/2.30f72a6a.chunk.js.LICENSE.txt": "/my-spotify-player/static/js/2.30f72a6a.chunk.js.LICENSE.txt",
+    "static/media/Spotify_Logo_Black.0d1e5545.png": "/my-spotify-player/static/media/Spotify_Logo_Black.0d1e5545.png",
+    "static/media/login_bg.6a0c9085.jpg": "/my-spotify-player/static/media/login_bg.6a0c9085.jpg",
+    "static/media/panorama.c71fa1f3.svg": "/my-spotify-player/static/media/panorama.c71fa1f3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1854dd6.js",
+    "static/js/2.30f72a6a.chunk.js",
+    "static/css/main.622add6d.chunk.css",
+    "static/js/main.df32dac5.chunk.js"
+  ]
+}
