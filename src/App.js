@@ -45,7 +45,11 @@ function App() {
     const tokenInUrl = getHashObjFromUrl().access_token;
     if (tokenInUrl) {
       // Clear URL hash (If using window.location.hash = "", a "#" sign will still exist in URL)
-      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname + window.location.search
+      );
 
       dispatch({ type: SET_TOKEN, token: tokenInUrl });
       sessionStorage.setItem('isLoggedin', true);
@@ -55,7 +59,9 @@ function App() {
 
   const refreshToken = useCallback(async () => {
     // The Promise returned from fetch won't reject on HTTP error status
-    const response = await fetch('/refresh_token');
+    const response = await fetch(
+      '/https://my-spotify-player.onrender.com/refresh_token'
+    );
     if (response.ok) {
       const respJson = await response.json();
       dispatch({ type: SET_TOKEN, token: respJson.token });

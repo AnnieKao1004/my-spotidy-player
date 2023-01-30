@@ -1,42 +1,42 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import { Box } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import logo from "../../img/Spotify_Logo_Black.png";
-import background from "../../img/login_bg.jpg";
+import React from 'react';
+import Button from '@mui/material/Button';
+import { Box } from '@mui/material';
+import { grey } from '@mui/material/colors';
+import logo from '../../img/Spotify_Logo_Black.png';
+import background from '../../img/login_bg.jpg';
 
 export default function Login() {
   return (
     <Box
       sx={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundImage: `url(${background})`,
-        backgroundPosition: "center",
+        backgroundPosition: 'center',
       }}
     >
-      <Box sx={{ height: "300px" }}>
+      <Box sx={{ height: '300px' }}>
         <Box
           component="img"
           src={logo}
-          sx={{ width: "auto", height: "150px" }}
+          sx={{ width: 'auto', height: '150px' }}
         ></Box>
       </Box>
 
       <Button
-        href={`/login`}
+        href="https://my-spotify-player.onrender.com/login"
         size="large"
         variant="contained"
         sx={{
-          color: "#ffffff",
-          fontSize: "16px",
-          fontWeight: "fontWeightMedium",
-          backgroundColor: grey["600"],
-          "&:hover": {
-            backgroundColor: grey["700"],
+          color: '#ffffff',
+          fontSize: '16px',
+          fontWeight: 'fontWeightMedium',
+          backgroundColor: grey['600'],
+          '&:hover': {
+            backgroundColor: grey['700'],
           },
         }}
       >
