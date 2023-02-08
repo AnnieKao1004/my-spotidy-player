@@ -18,9 +18,9 @@ function VerticalCard({ loading = false, data = {} }) {
 
   const onCardClick = async () => {
     if (data.type === 'playlist') {
-      navigate(`/playlist/${data.id}`);
+      navigate(`${process.env.PUBLIC_URL}/playlist/${data.id}`);
     } else if (data.type === 'artist') {
-      navigate(`/artist/${data.id}`);
+      navigate(`${process.env.PUBLIC_URL}/artist/${data.id}`);
     }
   };
 

@@ -20,9 +20,16 @@ import { getSpotify } from '../../utils/spotify';
 import { drawerWidth, footerHeight, headerHeight } from './style';
 
 const options = [
-  { name: 'Home', Icon: HomeRoundedIcon, path: 'home' },
-  { name: 'Search', Icon: ManageSearchRoundedIcon, path: 'search' },
-  // { name: "Create Playlist", Icon: AddBoxRoundedIcon },
+  {
+    name: 'Home',
+    Icon: HomeRoundedIcon,
+    path: `${process.env.PUBLIC_URL}/home`,
+  },
+  {
+    name: 'Search',
+    Icon: ManageSearchRoundedIcon,
+    path: `${process.env.PUBLIC_URL}/search`,
+  },
 ];
 
 function Sider({ open = false, setOpen = () => {} }) {
@@ -32,7 +39,7 @@ function Sider({ open = false, setOpen = () => {} }) {
 
   const handleClick = (e, name, path) => {
     if (path) {
-      navigate(path);
+      navigate(`${path}`);
     }
   };
 
@@ -48,7 +55,7 @@ function Sider({ open = false, setOpen = () => {} }) {
   }, [dispatch, location.pathname]);
 
   const handlePlaylistClick = (playlist) => {
-    navigate(`/playlist/${playlist.id}`);
+    navigate(`${process.env.PUBLIC_URL}/playlist/${playlist.id}`);
     dispatch({ type: SET_CURRENT, key: 'Playlist' });
   };
 

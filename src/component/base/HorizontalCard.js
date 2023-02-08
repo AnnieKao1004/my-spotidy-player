@@ -19,7 +19,7 @@ function HorizontalCard({ loading = true, data = {} }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const onPlayListClick = async () => {
-    navigate(`/playlist/${data.id}`);
+    navigate(`${process.env.PUBLIC_URL}/playlist/${data.id}`);
   };
 
   return (

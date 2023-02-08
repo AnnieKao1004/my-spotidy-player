@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Login from './component/page/Login';
@@ -50,18 +49,15 @@ function App() {
         '',
         window.location.pathname + window.location.search
       );
-
       dispatch({ type: SET_TOKEN, token: tokenInUrl });
       sessionStorage.setItem('isLoggedin', true);
-      navigate('home');
+      navigate(`${process.env.PUBLIC_URL}/home`);
     }
   }, [dispatch, navigate]);
 
   const refreshToken = useCallback(async () => {
     // The Promise returned from fetch won't reject on HTTP error status
-    const response = await fetch(
-      '/https://my-spotify-player.onrender.com/refresh_token'
-    );
+    const response = await fetch(`${process.env.REACT_APP_URL}refresh_token`);
     if (response.ok) {
       const respJson = await response.json();
       dispatch({ type: SET_TOKEN, token: respJson.token });

@@ -11,12 +11,27 @@ function Content() {
   return (
     <Container maxWidth="xl" sx={{ py: 3, height: '100%' }}>
       <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/search/:category" element={<CategoryList />} />
-        <Route path="/playlist/:id" element={<Playlist />} />
-        <Route path="/artist/:id" element={<ArtistTopTracks />} />
-        <Route path="/*" element={<Navigate to="/home" />} />
+        <Route path={`${process.env.PUBLIC_URL}/home`} element={<HomePage />} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/search`}
+          element={<SearchPage />}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/search/:category`}
+          element={<CategoryList />}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/playlist/:id`}
+          element={<Playlist />}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/artist/:id`}
+          element={<ArtistTopTracks />}
+        />
+        <Route
+          path="/*"
+          element={<Navigate to={`${process.env.PUBLIC_URL}/home`} />}
+        />
       </Routes>
     </Container>
   );

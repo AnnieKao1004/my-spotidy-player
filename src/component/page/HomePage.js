@@ -62,7 +62,7 @@ function HomePage() {
         >
           Welcome
         </Typography>
-        <Grid container rowSpacing={2} columnSpacing={3} zeroMinWidth>
+        <Grid item container rowSpacing={2} columnSpacing={3} zeroMinWidth>
           {featuredPlaylist.data.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} xl={4} key={index}>
               <HorizontalCard data={item} loading={featuredPlaylist.loading} />
@@ -79,7 +79,7 @@ function HomePage() {
         >
           Top Lists
         </Typography>
-        <Grid container rowSpacing={2} columnSpacing={3} zeroMinWidth>
+        <Grid item container rowSpacing={2} columnSpacing={3} zeroMinWidth>
           {topLists.data.map((item, index) => (
             <Grid item xs={12} sm={4} md={3} xl={2} key={index}>
               <VerticalCard data={item} loading={topLists.loading} />

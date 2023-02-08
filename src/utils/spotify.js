@@ -3,8 +3,8 @@ export const getHashObjFromUrl = () => {
   let hashObj = {};
 
   if (hashStr) {
-    hashObj = hashStr.split("&").reduce((acc, cur) => {
-      const parameterSet = cur.split("=");
+    hashObj = hashStr.split('&').reduce((acc, cur) => {
+      const parameterSet = cur.split('=');
       acc[parameterSet[0]] = decodeURIComponent(parameterSet[1]);
 
       return acc;
@@ -15,8 +15,8 @@ export const getHashObjFromUrl = () => {
 };
 
 export const getSpotify = async (
-  token = "",
-  endpoint = "",
+  token = '',
+  endpoint = '',
   params = {},
   withBaseUrl = true
 ) => {
@@ -25,8 +25,8 @@ export const getSpotify = async (
   );
   url.search = new URLSearchParams(params);
   const headers = new Headers();
-  headers.append("Authorization", `Bearer ${token}`);
-  headers.append("Content-Type", "application/json");
+  headers.append('Authorization', `Bearer ${token}`);
+  headers.append('Content-Type', 'application/json');
 
   const response = await fetch(url, {
     headers,
@@ -49,11 +49,11 @@ export const putSpotify = async (
   );
   url.search = new URLSearchParams(params);
   const headers = new Headers();
-  headers.append("Authorization", `Bearer ${token}`);
-  headers.append("Content-Type", "application/json");
+  headers.append('Authorization', `Bearer ${token}`);
+  headers.append('Content-Type', 'application/json');
 
   const response = await fetch(url, {
-    method: "PUT",
+    method: 'PUT',
     headers,
     body,
   });

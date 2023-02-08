@@ -27,7 +27,7 @@ export default function Login() {
       </Box>
 
       <Button
-        href="https://my-spotify-player.onrender.com/login"
+        href={`${process.env.REACT_APP_URL}login`}
         size="large"
         variant="contained"
         sx={{

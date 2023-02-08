@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import FormatIndentDecreaseRoundedIcon from '@mui/icons-material/FormatIndentDecreaseRounded';
@@ -11,10 +12,12 @@ import { headerHeight } from './style';
 
 function Header({ setOpen = () => {} }) {
   const [, dispatch] = useStateValue();
+  const navigate = useNavigate();
 
   const onClickLogout = () => {
     dispatch({ type: SET_TOKEN, token: '' });
     sessionStorage.removeItem('isLoggedin');
+    navigate(process.env.PUBLIC_URL);
   };
 
   return (
