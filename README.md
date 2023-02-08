@@ -10,7 +10,7 @@ A music player application integrated with Spotify.
 
 ## Live Demo
 
-[Live demo](https://my-spotify-music-player.herokuapp.com/)
+[Live demo](https://simple-spotify-player.onrender.com)
 
 ![Screenshot](./client/demo/demo.gif)
 
@@ -21,5 +21,6 @@ A music player application integrated with Spotify.
 
 ## Backend
 
+- [Github](https://github.com/AnnieKao1004/spotify_music_player_backend)
 - Express
 - User authentication server
