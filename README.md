@@ -12,7 +12,7 @@ A music player application integrated with Spotify.
 
 [Live demo](https://simple-spotify-player.onrender.com)
 
-![Screenshot](./client/demo/demo.gif)
+![Screenshot](./demo/demo.gif)
 
 ## Frontend
 
